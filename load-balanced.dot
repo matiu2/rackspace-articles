@@ -1,0 +1,17 @@
+digraph G {
+    customers -> LB -> web1;
+    LB -> web2;
+    LB -> web3;
+    LB -> web4;
+    web1 -> DB1;
+    web2 -> DB1;
+    web3 -> DB1;
+    web4 -> DB1;
+    DB1 -> DB2;
+    DB2 -> backups;
+    web1 -> backups;
+    DB1 [label="DB Master"];
+    DB2 [label="DB Slave"];
+    backups [label="Cloud Backups"];
+    LB [label="Load Balancer"];
+}

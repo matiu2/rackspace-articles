@@ -1,0 +1,31 @@
+digraph G {
+    node [shape=box, fontname=Helvetica];
+
+    subgraph web_heads { rank=same; web1; web2; web3; web4; }
+    subgraph backend { rank=same; DB1; backups; }
+
+    customers [shape=ellipse];
+    DB1 [label="DB Master", shape=ellipse, style=filled, fillcolor=ivory];
+    DB2 [label="DB Slave", shape=ellipse, style=filled, fillcolor=honeydew];
+    backups [label="Cloud Backups", shape=egg, style=filled, fillcolor=cyan];
+    LB [label="Load Balancer", shape=diamond, style=filled, fillcolor=lightsalmon];
+
+    customers -> LB [dir=both];
+    LB -> web1 [dir=both];
+    LB -> web2 [dir=both];
+    LB -> web3 [dir=both];
+    LB -> web4 [dir=both];
+    web1 -> DB1 [dir=both];
+    web2 -> DB1 [dir=both];
+    web3 -> DB1 [dir=both];
+    web4 -> DB1 [dir=both];
+    DB2 -> web1 [color=gray];
+    DB2 -> web2 [color=gray];
+    DB2 -> web3 [color=gray];
+    DB2 -> web4 [color=gray];
+    DB1 -> DB2;
+    DB2 -> backups;
+    web1 -> backups
+
+}
+
