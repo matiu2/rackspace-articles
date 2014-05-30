@@ -45,12 +45,9 @@ This is the architecture we'll be using in our examples.
 
 ![Architecture Graph](lb.dot.png)
 
-In this use case, we use [Gluster FS](TODO: LINK GLUSTER ARTICLE) to share the PHP code, and sessions between all the Web Servers. We use [Rackspace Networks](http://www.rackspace.com/cloud/networks/), one network for all hosts plus the DB.
+In this use case, Jo use [Gluster FS](TODO: LINK GLUSTER ARTICLE) to share the PHP code, and sessions between all the Web Servers. We use [Rackspace Networks](http://www.rackspace.com/cloud/networks/), one network for all hosts plus the DB.
 
-The resource we'll be autoscaling will be the Web servers. We'll make an image that works, a startup script that'll connect it to the rest of the app and put it into the load balancer.
-
-We'll be using the [PyRAX](https://github.com/rackspace/pyrax) client for scripting.
-
+The resource we'll be autoscaling will be the Web servers. 
 
 # Glossary
 
@@ -64,4 +61,4 @@ Lets just cover some of the terms that we'll be using before moving onwards:
 
 # Summary
 
-Now we understand a little about the why and what, in the next articles we'll go through setting up Jo's case study.
+Now we understand a little about the why and what, in the next articles we'll go through the auto scaling part of Jo's setup.

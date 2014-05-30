@@ -13,6 +13,6 @@
 
 # Auto Scale
 
-1. [Overview](auto-scale/advantages.md) - Advantages to scaling out rather than up. Choosing an archetecture, making sure not to overload the DB(s), using read-only DB slaves, how to share php and magento session info between nodes(glusterfs/memcached), how to share and handle files and file writes (glusterfs/lsyncd+varnish/nginx)
-2. Setting up auto scaling - link to docs, creating the initial image, choosing the trigger levels, server limits. Implementing the API calls, documenting your script.
-3. Testing autoscale - load testing, getting a notification when it's activated analysing LB and server logs to measure effectiveness.
+1. [Overview](auto-scale/advantages.md) - Advantages to scaling out rather than up.
+2. [Setting up auto scaling](auto-scale/setting-up.md) - Implementing the API calls, intro to the API docs.
+3. [web-triggers](auto-scale/web-triggers.md) - Creating URLs that can be called, to add and remove servers from your app.
